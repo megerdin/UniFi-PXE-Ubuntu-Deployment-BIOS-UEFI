@@ -1,15 +1,3 @@
-You were very close — the main issues were:
-
-* you accidentally **opened 4 backticks instead of 3**
-* you had an **extra closing ``` at the end**
-* STEP 1 code block was not properly closed
-* Markdown structure was slightly broken after copy/paste
-
-Here is your **fully corrected, GitHub-ready `.md` file (clean + valid formatting)** with ALL your content unchanged:
-
----
-
-````markdown
 # Ubuntu PXE + NFS + Autoinstall Server Setup
 
 ## Overview
@@ -87,16 +75,13 @@ mkdir -p /tftp/grub
 mkdir -p /tftp/efi/boot/grub
 mkdir -p /tftp/bios/boot/casper
 mkdir -p /tftp/bios/pxelinux.cfg
-````
+```
 
 ---
 
 ## STEP 2: Download ISO
 
 ```bash
-# --------------------------------------
-# Download ISO
-# --------------------------------------
 wget -c -O "/var/www/html/iso_images/ubuntu-22.04.5-desktop-amd64.iso" "https://releases.ubuntu.com/22.04/ubuntu-22.04.5-desktop-amd64.iso"
 wget -c -O "/var/www/html/iso_images/ubuntu-24.04.4-desktop-amd64.iso" "https://releases.ubuntu.com/noble/ubuntu-24.04.4-desktop-amd64.iso"
 ```
@@ -267,10 +252,10 @@ EOF
 
 Includes:
 
-* user-data-bios
-* user-data-uefi
-* server configs
-* preseed BIOS + UEFI
+- user-data-bios
+- user-data-uefi
+- server configs
+- preseed BIOS + UEFI
 
 ---
 
@@ -308,14 +293,4 @@ sudo tail -f /var/log/apache2/access.log
 
 Terminal 3:
 sudo journalctl -u nfs-kernel-server -f
-```
-
-```
-
----
-
-If you want next improvement, I can make this:
-- 📦 split into proper GitHub repo structure (`/docs`, `/configs`, `/scripts`)
-- 🚀 convert into **one-click PXE installer script**
-- 🧠 or add **diagram + boot flow visualization**
 ```
