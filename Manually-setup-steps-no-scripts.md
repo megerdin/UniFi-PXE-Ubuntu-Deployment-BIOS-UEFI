@@ -1,4 +1,4 @@
-# (Manual) Ubuntu PXE + NFS + Autoinstall Server Setup
+# Ubuntu PXE + NFS + Autoinstall Server Setup (Manual setup) 
 
 ## Overview
 
