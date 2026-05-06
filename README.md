@@ -4,7 +4,7 @@ Fully automated PXE deployment environment for Ubuntu (Desktop & Server), suppor
 
 * ✅ Legacy BIOS (PXELINUX)
 * ✅ UEFI (GRUB EFI)
-* ✅ Multi-version Ubuntu (22.04 → 24.04 → future-ready)
+* ✅ Multi-version Ubuntu (22.04 → 24.04 + → future-ready)
 * ✅ Automated installs (Subiquity + Preseed fallback)
 * ✅ Dynamic PXE menu generation
 
