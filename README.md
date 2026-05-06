@@ -106,14 +106,14 @@ Apache (HTTP)
 git clone <your-repo>
 cd <your-repo>
 
-chmod +x pxe-setup.sh
-sudo ./pxe-setup.sh
+chmod +x unifi-pxe-setup.sh
+sudo ./unifi-pxe-setup.sh
 ```
 
 Optional fast mode (skip service restart):
 
 ```bash
-sudo ./pxe-setup.sh --no-restart
+sudo ./unifi-pxe-setup.sh --no-restart
 ```
 
 ---
@@ -221,7 +221,7 @@ Manual PXE setup requires coordinating:
 This script reduces all of that to:
 
 ```bash
-sudo ./pxe-setup.sh
+sudo ./unifi-pxe-setup.sh
 ```
 
 ---
