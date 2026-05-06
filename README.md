@@ -103,6 +103,11 @@ Apache (HTTP)
 ## 🛠️ Quick Start
 
 ```bash
+# Option 1 (standard - recommended)
+git clone https://github.com/megerdin/UniFi-PXE-Ubuntu-Deployment-BIOS-UEFI.git
+cd UniFi-PXE-Ubuntu-Deployment-BIOS-UEFI
+
+# Option 2 (GitHub CLI users only)
 gh repo clone megerdin/UniFi-PXE-Ubuntu-Deployment-BIOS-UEFI
 cd UniFi-PXE-Ubuntu-Deployment-BIOS-UEFI
 
