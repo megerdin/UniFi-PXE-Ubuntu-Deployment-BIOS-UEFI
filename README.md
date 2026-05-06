@@ -143,7 +143,7 @@ To replicate this setup manually, you would need to:
 
 ➡️ This script automates all of the above.
 
-[Step by step details Manual provisioning here.](Manually-setup-steps-no-scripts.md)
+[Step by step Manual provisioning details here.](Manually-setup-steps-no-scripts.md)
 
 
 ---
