@@ -127,7 +127,7 @@ sudo ./unifi-pxe-setup.sh --no-restart
 
 ---
 
-## 🛠️ [Manual Provisioning (Summary)] (Manually-setup-steps-no-scripts.md)
+## 🛠️ [Manual Provisioning (Summary)](Manually-setup-steps-no-scripts.md)
 
 To replicate this setup manually, you would need to:
 
