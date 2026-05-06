@@ -1,0 +1,5 @@
+/var/www/html/ubuntu/desktop.22.04.5/ *(ro,sync,no_wdelay,insecure_locks,no_root_squash,insecure,no_subtree_check)
+/var/www/html/ubuntu/desktop.24.04.4/ *(ro,sync,no_wdelay,insecure_locks,no_root_squash,insecure,no_subtree_check)
+/var/www/html/ubuntu/desktop.26.04/ *(ro,sync,no_wdelay,insecure_locks,no_root_squash,insecure,no_subtree_check)
+/var/www/html/ubuntu/server.22.04.5/ *(ro,sync,no_wdelay,insecure_locks,no_root_squash,insecure,no_subtree_check)
+/var/www/html/ubuntu/server.24.04.4/ *(ro,sync,no_wdelay,insecure_locks,no_root_squash,insecure,no_subtree_check)

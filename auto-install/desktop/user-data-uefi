@@ -1,0 +1,46 @@
+#cloud-config
+autoinstall:
+  version: 1
+  interactive-sections: []
+
+  refresh-installer:
+    update: false
+
+  updates: security
+
+  ssh:
+    install-server: true
+    allow-pw: true
+
+  drivers:
+    install: false
+
+  source:
+    id: ubuntu-desktop-minimal
+
+  identity:
+    hostname: newsystem
+    username: ubuntu
+    password: '$6$2mgdYOl8vTups5VH$XZb0UyLv7URen7un9OMlhy/Rv7A9HOgSktE9KvP5aiNAiVQmd9by/odMMAetc7J5FBDqed1mtgZj2UNqk4f43.'
+    realname: Admin
+
+  locale: en_GB.UTF-8
+  timezone: Europe/London
+
+  keyboard:
+    layout: gb
+    variant: ""
+
+  storage:
+    layout:
+      name: direct
+      match:
+        # This targets the first available drive.
+        # Change to a specific ID if you have multiple drives.
+        size: largest
+  late-commands:
+    - curtin in-target -- systemctl disable unattended-upgrades
+    - curtin in-target -- systemctl disable apport.service
+    - curtin in-target -- systemctl stop apport.service
+
+  shutdown: reboot

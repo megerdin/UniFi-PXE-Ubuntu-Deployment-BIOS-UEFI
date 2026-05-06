@@ -1,0 +1,185 @@
+testuser@server-homelab:~$ tree /tftp/
+/tftp/
+├── bios
+│   ├── boot
+│   │   └── casper
+│   │       ├── desktop.22.04.5
+│   │       │   ├── initrd
+│   │       │   └── vmlinuz
+│   │       ├── desktop.24.04.4
+│   │       │   ├── initrd
+│   │       │   └── vmlinuz
+│   │       ├── desktop.26.04
+│   │       │   ├── initrd
+│   │       │   └── vmlinuz
+│   │       ├── server.22.04.5
+│   │       │   ├── initrd
+│   │       │   └── vmlinuz
+│   │       └── server.24.04.4
+│   │           ├── initrd
+│   │           └── vmlinuz
+│   ├── ldlinux.c32
+│   ├── libutil.c32
+│   ├── lpxelinux.0
+│   ├── memtest86+.bin
+│   ├── menu.c32
+│   ├── pxelinux.0
+│   ├── pxelinux.cfg
+│   │   └── default
+│   └── vesamenu.c32
+├── efi
+│   └── boot
+│       ├── bootx64.efi
+│       ├── grub
+│       │   └── grub.cfg -> /tftp/grub/grub.cfg
+│       └── grubx64.efi
+├── grub
+│   └── grub.cfg
+└── grub.cfg -> /tftp/grub/grub.cfg
+
+13 directories, 23 files
+testuser@server-homelab:~$ tree /tftp/ -L 3
+/tftp/
+├── bios
+│   ├── boot
+│   │   └── casper
+│   ├── ldlinux.c32
+│   ├── libutil.c32
+│   ├── lpxelinux.0
+│   ├── memtest86+.bin
+│   ├── menu.c32
+│   ├── pxelinux.0
+│   ├── pxelinux.cfg
+│   │   └── default
+│   └── vesamenu.c32
+├── efi
+│   └── boot
+│       ├── bootx64.efi
+│       ├── grub
+│       └── grubx64.efi
+├── grub
+│   └── grub.cfg
+└── grub.cfg -> /tftp/grub/grub.cfg
+
+8 directories, 12 files
+testuser@server-homelab:~$
+testuser@server-homelab:~$ tree /tftp/
+/tftp/
+├── bios
+│   ├── boot
+│   │   └── casper
+│   │       ├── desktop.22.04.5
+│   │       │   ├── initrd
+│   │       │   └── vmlinuz
+│   │       ├── desktop.24.04.4
+│   │       │   ├── initrd
+│   │       │   └── vmlinuz
+│   │       ├── desktop.26.04
+│   │       │   ├── initrd
+│   │       │   └── vmlinuz
+│   │       ├── server.22.04.5
+│   │       │   ├── initrd
+│   │       │   └── vmlinuz
+│   │       └── server.24.04.4
+│   │           ├── initrd
+│   │           └── vmlinuz
+│   ├── ldlinux.c32
+│   ├── libutil.c32
+│   ├── lpxelinux.0
+│   ├── memtest86+.bin
+│   ├── menu.c32
+│   ├── pxelinux.0
+│   ├── pxelinux.cfg
+│   │   └── default
+│   └── vesamenu.c32
+├── efi
+│   └── boot
+│       ├── bootx64.efi
+│       ├── grub
+│       │   └── grub.cfg -> /tftp/grub/grub.cfg
+│       └── grubx64.efi
+├── grub
+│   └── grub.cfg
+└── grub.cfg -> /tftp/grub/grub.cfg
+
+13 directories, 23 files
+testuser@server-homelab:~$ tree /var/www/html/ -L 3
+/var/www/html/
+├── auto-install
+│   ├── desktop
+│   │   ├── meta-data
+│   │   ├── preseed-bios.cfg
+│   │   ├── preseed.cfg
+│   │   ├── preseed-uefi.cfg
+│   │   ├── user-data
+│   │   ├── user-data-bios
+│   │   ├── user-data-uefi
+│   │   └── vendor-data
+│   └── server
+│       ├── meta-data
+│       ├── user-data
+│       ├── user-data-bios
+│       ├── user-data-uefi
+│       └── vendor-data
+├── index.html
+├── iso_images
+│   ├── ubuntu-22.04.5-desktop-amd64.iso
+│   ├── ubuntu-22.04.5-live-server-amd64.iso
+│   ├── ubuntu-24.04.4-desktop-amd64.iso
+│   ├── ubuntu-24.04.4-live-server-amd64.iso
+│   └── ubuntu-26.04-beta-desktop-amd64.iso
+└── ubuntu
+    ├── desktop.22.04.5
+    │   ├── boot
+    │   ├── boot.catalog
+    │   ├── casper
+    │   ├── dists
+    │   ├── EFI
+    │   ├── install
+    │   ├── md5sum.txt
+    │   ├── pool
+    │   ├── preseed
+    │   └── ubuntu -> .
+    ├── desktop.24.04.4
+    │   ├── boot
+    │   ├── boot.catalog
+    │   ├── casper
+    │   ├── dists
+    │   ├── EFI
+    │   ├── install
+    │   ├── md5sum.txt
+    │   ├── pool
+    │   ├── preseed
+    │   └── ubuntu -> .
+    ├── desktop.26.04
+    │   ├── boot
+    │   ├── boot.catalog
+    │   ├── casper
+    │   ├── dists
+    │   ├── EFI
+    │   ├── md5sum.txt
+    │   ├── pool
+    │   └── ubuntu -> .
+    ├── server.22.04.5
+    │   ├── boot
+    │   ├── boot.catalog
+    │   ├── casper
+    │   ├── dists
+    │   ├── EFI
+    │   ├── install
+    │   ├── md5sum.txt
+    │   ├── pool
+    │   └── ubuntu -> .
+    └── server.24.04.4
+        ├── boot
+        ├── boot.catalog
+        ├── casper
+        ├── dists
+        ├── EFI
+        ├── install
+        ├── md5sum.txt
+        ├── pool
+        └── ubuntu -> .
+
+46 directories, 29 files
+testuser@server-homelab:~$

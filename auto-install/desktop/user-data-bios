@@ -1,0 +1,75 @@
+#cloud-config
+autoinstall:
+  version: 1
+  interactive-sections: []
+
+  refresh-installer:
+    update: false
+  updates: false
+
+  ssh:
+    install-server: true
+    allow-pw: true
+
+  drivers:
+    install: false
+  source:
+    id: ubuntu-desktop-minimal
+
+
+  identity:
+    hostname: newsystem
+    username: ubuntu
+    password: '$6$2mgdYOl8vTups5VH$XZb0UyLv7URen7un9OMlhy/Rv7A9HOgSktE9KvP5aiNAiVQmd9by/odMMAetc7J5FBDqed1mtgZj2UNqk4f43.'
+    realname: Admin
+
+  # Regional Settings
+  locale: en_GB.UTF-8
+  timezone: Europe/London
+  keyboard:
+    layout: gb
+    variant: ""
+
+  # BIOS GPT partition
+  storage:
+    config:
+      - id: disk-sda
+        type: disk
+        ptable: gpt
+        path: /dev/sda
+        wipe: superblock-recursive
+        preserve: false
+        grub_device: true
+
+      - id: bios-boot
+        type: partition
+        device: disk-sda
+        size: 1M
+        flag: bios_grub
+
+      - id: partition-root
+        type: partition
+        device: disk-sda
+        size: -1
+
+      - id: format-root
+        type: format
+        fstype: ext4
+        volume: partition-root
+
+      - id: mount-root
+        type: mount
+        device: format-root
+        path: /
+  late-commands:
+    - curtin in-target -- systemctl disable unattended-upgrades
+    - curtin in-target -- systemctl disable apport.service
+    - curtin in-target -- systemctl stop apport.service
+    - curtin in-target -- reboot
+
+#late-commands:
+#  - curtin in-target --target=/target -- systemctl disable apport.service
+#  - curtin in-target --target=/target -- systemctl stop apport.service
+#  - curtin in-target --target=/target -- reboot
+  updates: security
+  shutdown: reboot

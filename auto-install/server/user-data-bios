@@ -1,0 +1,66 @@
+#cloud-config
+autoinstall:
+  version: 1
+
+  apt:
+    disable_components: []
+    fallback: offline-install
+
+  keyboard:
+    layout: gb
+    toggle: null
+    variant: ''
+
+  locale: en_GB.UTF-8
+  timezone: Europe/London
+
+  identity:
+    hostname: newsystem
+    username: ubuntu
+    password: '$6$2mgdYOl8vTups5VH$XZb0UyLv7URen7un9OMlhy/Rv7A9HOgSktE9KvP5aiNAiVQmd9by/odMMAetc7J5FBDqed1mtgZj2UNqk4f43.'
+    realname: Admin
+
+  package_update: false
+  package_upgrade: false
+
+    packages:
+    - ubuntu-desktop-minimal
+    - autossh
+    - black
+    - baobab
+    - curl
+    - dos2unix
+    - dbus-x11
+    - git
+    - gnupg2
+    - isort
+    - libcups2-dev
+    - libglib2.0-dev-bin
+    - libmpv2
+    - libcanberra-gtk-module
+    - libsecret-tools
+    - moreutils
+    - ncdu
+    - nmap
+    - net-tools
+    - openssh-server
+    - python3-sh
+    - python3-requests
+    - python3-venv
+    - python3-dev
+    - python3-serial
+    - python-is-python3
+    - tree
+    - timeshift
+    - supervisor
+    - software-properties-common
+    - terminator
+    - wget
+    - xserver-xorg
+
+  late-commands:
+    - curtin in-target --target=/target systemctl set-default graphical.target
+    - curtin in-target -- systemctl disable unattended-upgrades
+  updates: security
+  shutdown: reboot
+
