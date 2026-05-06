@@ -60,7 +60,7 @@ Once deployed, any machine connected to the network can:
 - Bare-metal recovery and reinstall systems
 
 
-NB: I haven't tested the manual steps myslef but extracted the followings from my automated provisioning script using AI, if theres any issue please leave comments and i will check, bet use dynamic provisioning script, which require zero or very small changes  for preparing PXE server.
+NB: I haven't tested the manual steps myslef but extracted the followings from my automated provisioning script using AI, if theres any issue please leave comments and i will check, best recommendation is use [dynamic provisioning script](uifi-pxe-setup.sh), which require zero or very small changes  for preparing PXE server.
 
 ---
 
