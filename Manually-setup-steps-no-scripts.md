@@ -1,4 +1,4 @@
-# 🚀 Ubuntu PXE Auto-Install Server (BIOS + UEFI)
+# 🚀 (Manual) Ubuntu PXE Auto-Install Server (BIOS + UEFI)
 
 Fully automated PXE boot environment for Ubuntu Desktop & Server using:
 
