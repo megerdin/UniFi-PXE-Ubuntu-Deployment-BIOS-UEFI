@@ -127,7 +127,7 @@ sudo ./unifi-pxe-setup.sh --no-restart
 
 ---
 
-## 🛠️ [Manual Provisioning (Summary)](Manually-setup-steps-no-scripts.md)
+## 🛠️ Manual Provisioning (Summary)
 
 To replicate this setup manually, you would need to:
 
@@ -142,6 +142,9 @@ To replicate this setup manually, you would need to:
 9. Start and verify services
 
 ➡️ This script automates all of the above.
+
+[Step by step details Manual provisioning here.](Manually-setup-steps-no-scripts.md)
+
 
 ---
 
