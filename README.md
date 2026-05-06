@@ -236,7 +236,7 @@ This is a **dynamic, reusable PXE deployment solution**.
 
 ## 📜 License
 
-MIT (or your preferred license)
+MIT
 
 ---
 
