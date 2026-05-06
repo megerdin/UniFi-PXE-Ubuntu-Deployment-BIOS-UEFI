@@ -250,7 +250,7 @@ EOF
 
 ## STEP 13: Autoinstall Configs
 
-Includes:
+[Includes here:](auto-install)
 
 - user-data-bios
 - user-data-uefi
