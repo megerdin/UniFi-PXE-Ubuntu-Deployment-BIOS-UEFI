@@ -103,8 +103,8 @@ Apache (HTTP)
 ## 🛠️ Quick Start
 
 ```bash
-git clone <your-repo>
-cd <your-repo>
+gh repo clone megerdin/UniFi-PXE-Ubuntu-Deployment-BIOS-UEFI
+cd UniFi-PXE-Ubuntu-Deployment-BIOS-UEFI
 
 chmod +x unifi-pxe-setup.sh
 sudo ./unifi-pxe-setup.sh
