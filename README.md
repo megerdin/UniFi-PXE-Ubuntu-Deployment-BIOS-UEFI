@@ -1,4 +1,4 @@
-# 🚀 UniFi PXE Ubuntu Deployment (BIOS + UEFI)
+# 🚀 (Dynamic) UniFi PXE Ubuntu Deployment (BIOS + UEFI)
 
 Fully automated PXE deployment environment for Ubuntu (Desktop & Server), supporting:
 
